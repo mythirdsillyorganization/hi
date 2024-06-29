@@ -19,6 +19,8 @@ jobs:
         run: |
           install_name_tool -add_rpath @executable_path/Frameworks ./hook.dylib
           install_name_tool -change /System/Library/Frameworks/OpenGLES.framework/OpenGLES @rpath/ANGLEGLKit.framework/ANGLEGLKit ./hook.dylib
+          install_name_tool -add_rpath @executable_path/Frameworks ./GeometryJump
+          install_name_tool -change /System/Library/Frameworks/OpenGLES.framework/OpenGLES @rpath/ANGLEGLKit.framework/ANGLEGLKit ./GeometryJump
       - uses: actions/upload-artifact@v4
         with:
             path: | 
