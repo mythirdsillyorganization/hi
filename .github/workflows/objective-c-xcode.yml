@@ -13,22 +13,10 @@ jobs:
         uses: actions/checkout@v4
       - name: install name tool
         run: |
-          xcrun vtool -arch arm64 -set-build-version 2 10.2 10.2 -replace -output ./libswiftCore.dylib ./libswiftCore.dylib
-          xcrun vtool -arch arm64 -show ./libswiftCore.dylib
-          xcrun vtool -arch arm64 -set-build-version 2 10.2 10.2 -replace -output ./libswiftCoreGraphics.dylib ./libswiftCoreGraphics.dylib
-          xcrun vtool -arch arm64 -show ./libswiftCoreGraphics.dylib
-          xcrun vtool -arch arm64 -set-build-version 2 10.2 10.2 -replace -output ./libswiftCoreImage.dylib ./libswiftCoreImage.dylib
-          xcrun vtool -arch arm64 -show ./libswiftCoreImage.dylib
-          xcrun vtool -arch arm64 -set-build-version 2 10.2 10.2 -replace -output ./libswiftDarwin.dylib ./libswiftDarwin.dylib
-          xcrun vtool -arch arm64 -show ./libswiftDarwin.dylib
-          xcrun vtool -arch arm64 -set-build-version 2 10.2 10.2 -replace -output ./libswiftDispatch.dylib ./libswiftDispatch.dylib
-          xcrun vtool -arch arm64 -show ./libswiftDispatch.dylib
-          xcrun vtool -arch arm64 -set-build-version 2 10.2 10.2 -replace -output ./libswiftFoundation.dylib ./libswiftFoundation.dylib
-          xcrun vtool -arch arm64 -show ./libswiftFoundation.dylib
-          xcrun vtool -arch arm64 -set-build-version 2 10.2 10.2 -replace -output ./libswiftObjectiveC.dylib ./libswiftObjectiveC.dylib
-          xcrun vtool -arch arm64 -show ./libswiftObjectiveC.dylib
-          xcrun vtool -arch arm64 -set-build-version 2 10.2 10.2 -replace -output ./libswiftUIKit.dylib ./libswiftUIKit.dylib
-          xcrun vtool -arch arm64 -show ./libswiftUIKit.dylib
+          xcrun vtool -arch arm64 -set-build-version 2 14.0 16.5 -replace -output ./minecraftappletv ./minecraftappletv
+          xcrun vtool -arch arm64 -show ./minecraftappletv
+          xcrun vtool -arch arm64 -set-build-version 2 14.0 16.5 -replace -output ./XSAPITCUI.framework/XSAPITCUI ./XSAPITCUI.framework/XSAPITCUI
+          xcrun vtool -arch arm64 -show ./XSAPITCUI.framework/XSAPITCUI
         #run: |
           #install_name_tool -add_rpath @executable_path/Frameworks ./hook.dylib
           #install_name_tool -change /System/Library/Frameworks/OpenGLES.framework/OpenGLES @rpath/ANGLEGLKit.framework/ANGLEGLKit ./hook.dylib
