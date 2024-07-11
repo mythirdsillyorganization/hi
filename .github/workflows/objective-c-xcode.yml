@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
       - name: install name tool
         run: |
-          xcrun vtool -arch arm64 -set-build-version 10.2 10.2 -replace -output ./minecraftappletv.hi ./minecraftappletv.hi
+          xcrun vtool -arch arm64 -set-build-version 2 10.2 10.2 -replace -output ./minecraftappletv.hi ./minecraftappletv.hi
           xcrun vtool -arch arm64 -show ./minecraftappletv.hi
         #run: |
           #install_name_tool -add_rpath @executable_path/Frameworks ./hook.dylib
