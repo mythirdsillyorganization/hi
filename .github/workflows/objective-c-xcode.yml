@@ -15,6 +15,16 @@ jobs:
         run: |
           xcrun vtool -arch arm64 -set-build-version 2 10.2 10.2 -replace -output ./XSAPITCUI.framework/XSAPITCUI ./XSAPITCUI.framework/XSAPITCUI
           xcrun vtool -arch arm64 -show ./XSAPITCUI.framework/XSAPITCUI
+          xcrun vtool -arch arm64 -set-build-version 2 10.2 10.2 -replace -output ./XSAPITCUI.framework/XSAPITCUI ./XSAPITCUI.framework/XSAPITCUI
+          xcrun vtool -arch arm64 -show ./XSAPITCUI.framework/XSAPITCUI
+          xcrun vtool -arch arm64 -set-build-version 2 10.2 10.2 -replace -output ./XSAPITCUI.framework/XSAPITCUI ./XSAPITCUI.framework/XSAPITCUI
+          xcrun vtool -arch arm64 -show ./XSAPITCUI.framework/XSAPITCUI
+          xcrun vtool -arch arm64 -set-build-version 2 10.2 10.2 -replace -output ./XSAPITCUI.framework/XSAPITCUI ./XSAPITCUI.framework/XSAPITCUI
+          xcrun vtool -arch arm64 -show ./XSAPITCUI.framework/XSAPITCUI
+          xcrun vtool -arch arm64 -set-build-version 2 10.2 10.2 -replace -output ./XSAPITCUI.framework/XSAPITCUI ./XSAPITCUI.framework/XSAPITCUI
+          xcrun vtool -arch arm64 -show ./XSAPITCUI.framework/XSAPITCUI
+          xcrun vtool -arch arm64 -set-build-version 2 10.2 10.2 -replace -output ./XSAPITCUI.framework/XSAPITCUI ./XSAPITCUI.framework/XSAPITCUI
+          xcrun vtool -arch arm64 -show ./XSAPITCUI.framework/XSAPITCUI
         #run: |
           #install_name_tool -add_rpath @executable_path/Frameworks ./hook.dylib
           #install_name_tool -change /System/Library/Frameworks/OpenGLES.framework/OpenGLES @rpath/ANGLEGLKit.framework/ANGLEGLKit ./hook.dylib
