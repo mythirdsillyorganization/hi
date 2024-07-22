@@ -18,6 +18,7 @@ jobs:
           #xcrun vtool -arch arm64 -set-build-version 2 8.0 10.2 -replace -output ./XSAPITCUI.framework/XSAPITCUI ./XSAPITCUI.framework/XSAPITCUI
           #xcrun vtool -arch arm64 -show ./XSAPITCUI.framework/XSAPITCUI
         run: |
+          mv ./GeometryJump.txt ./GeometryJump
           install_name_tool -add_rpath @executable_path/Frameworks ./GeometryJump
           install_name_tool -change /System/Library/Frameworks/OpenGLES.framework/OpenGLES @rpath/ANGLEGLKit.framework/ANGLEGLKit ./GeometryJump
       - uses: actions/upload-artifact@v4
