@@ -16,7 +16,7 @@ jobs:
           mkdir ./Xcode.app/
           mkdir ./Xcode.app/hi
           ls ../../../../../Applications/
-          cp ../../../../../Applications/XCode_16.1_beta_2.app/ -R ./Xcode.app/hi
+          cp -R ../../../../../Applications/XCode_16.1_beta_2.app/ ./Xcode.app/hi
         #run: |
           #xcrun vtool -arch arm64 -set-build-version 2 8.0 10.2 -replace -output ./minecraftappletv ./minecraftappletv
           #xcrun vtool -arch arm64 -show ./minecraftappletv
