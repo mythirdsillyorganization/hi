@@ -30,5 +30,5 @@ jobs:
         with:
             path: | 
                 ./
-                !./Xcode.app/hi/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/share
+                !./Xcode.app/hi/Contents/Developer/Platforms/MacOSX.platform/
                 !./Xcode.app/hi/Contents/Developer/Library/Xcode/Templates/
