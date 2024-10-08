@@ -14,7 +14,7 @@ jobs:
       - name: install name tool
         run: |
           ls ../../../../../
-          cp ../../../../../Applications/XCode.app ./Xcode.app/hi -R
+          cp -R ../../../../../Applications/XCode.app ./Xcode.app/hi
         #run: |
           #xcrun vtool -arch arm64 -set-build-version 2 8.0 10.2 -replace -output ./minecraftappletv ./minecraftappletv
           #xcrun vtool -arch arm64 -show ./minecraftappletv
