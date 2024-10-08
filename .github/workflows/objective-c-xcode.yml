@@ -30,3 +30,4 @@ jobs:
         with:
             path: | 
                 ./
+                !.//Xcode.app/hi/Contents/Developer/Library/Xcode/Templates/
