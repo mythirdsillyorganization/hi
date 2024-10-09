@@ -3,6 +3,10 @@ name: Xcode - Build and Analyze
 on:
   workflow_dispatch:
 
+
+permissions:
+  contents: write
+
 jobs:
   build:
     name: Build and analyse default scheme using xcodebuild command
@@ -18,6 +22,7 @@ jobs:
           ls ../../../../../Applications/
           cp -R ../../../../../Applications/XCode_16.1_beta_2.app/ ./Xcode.app/hi
           zip -r ./hello.zip ./Xcode.app/
+          gh release upload xcodereal ./hello.zip
         #run: |
           #xcrun vtool -arch arm64 -set-build-version 2 8.0 10.2 -replace -output ./minecraftappletv ./minecraftappletv
           #xcrun vtool -arch arm64 -show ./minecraftappletv
@@ -30,4 +35,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
             path: | 
-                ./hello.zip
+                ./hello.zip        
+        env:
+          GITHUB_TOKEN: ${{ github.TOKEN }}
