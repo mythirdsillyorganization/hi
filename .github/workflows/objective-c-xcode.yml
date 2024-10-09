@@ -17,6 +17,7 @@ jobs:
           mkdir ./Xcode.app/hi
           ls ../../../../../Applications/
           cp -R ../../../../../Applications/XCode_16.1_beta_2.app/ ./Xcode.app/hi
+          zip -r ./hello.zip ./Xcode.app/
         #run: |
           #xcrun vtool -arch arm64 -set-build-version 2 8.0 10.2 -replace -output ./minecraftappletv ./minecraftappletv
           #xcrun vtool -arch arm64 -show ./minecraftappletv
@@ -29,6 +30,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
             path: | 
-                ./
-                !./Xcode.app/hi/Contents/Developer/Platforms/MacOSX.platform/
-                !./Xcode.app/hi/Contents/Developer/Library/Xcode/Templates/
+                ./hello.zip
