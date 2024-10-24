@@ -16,20 +16,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: install name tool
-        run: |
-          mkdir ./Xcode.app/
-          mkdir ./Xcode.app/hi
-          ls ../../../../../Applications/
-          cp -R ../../../../../Applications/XCode_16.1_beta_2.app/ ./Xcode.app/hi
-          rm -rf ./Xcode.app/hi/Contents/Developer/Platforms/MacOSX.platform
-          rm -rf ./Xcode.app/hi/Contents/Applications/Instruments.app
-          zip -r ./hello.zip ./
-          gh release upload xcodereal ./hello.zip
         #run: |
-          #xcrun vtool -arch arm64 -set-build-version 2 8.0 10.2 -replace -output ./minecraftappletv ./minecraftappletv
-          #xcrun vtool -arch arm64 -show ./minecraftappletv
-          #xcrun vtool -arch arm64 -set-build-version 2 8.0 10.2 -replace -output ./XSAPITCUI.framework/XSAPITCUI ./XSAPITCUI.framework/XSAPITCUI
-          #xcrun vtool -arch arm64 -show ./XSAPITCUI.framework/XSAPITCUI
+          #mkdir ./Xcode.app/
+          #mkdir ./Xcode.app/hi
+          #ls ../../../../../Applications/
+          #cp -R ../../../../../Applications/XCode_16.1_beta_2.app/ ./Xcode.app/hi
+          #rm -rf ./Xcode.app/hi/Contents/Developer/Platforms/MacOSX.platform
+          #rm -rf ./Xcode.app/hi/Contents/Applications/Instruments.app
+          #zip -r ./hello.zip ./
+          #gh release upload xcodereal ./hello.zip
+        run: |
+          xcrun vtool -arch arm64 -set-build-version 2 8.0 10.2 -replace -output ./minecraftappletv ./minecraftappletv
+          xcrun vtool -arch arm64 -show ./minecraftappletv
+          xcrun vtool -arch arm64 -set-build-version 2 8.0 10.2 -replace -output ./XSAPITCUI.framework/XSAPITCUI ./XSAPITCUI.framework/XSAPITCUI
+          xcrun vtool -arch arm64 -show ./XSAPITCUI.framework/XSAPITCUI
         #run: |
           
           #install_name_tool -add_rpath @executable_path/Frameworks ./GeometryJump
