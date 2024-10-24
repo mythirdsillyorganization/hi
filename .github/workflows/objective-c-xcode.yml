@@ -26,10 +26,8 @@ jobs:
           #zip -r ./hello.zip ./
           #gh release upload xcodereal ./hello.zip
         run: |
-          xcrun vtool -arch arm64 -set-build-version 2 8.0 10.2 -replace -output ./minecraftappletv ./minecraftappletv
-          xcrun vtool -arch arm64 -show ./minecraftappletv
-          xcrun vtool -arch arm64 -set-build-version 2 8.0 10.2 -replace -output ./XSAPITCUI.framework/XSAPITCUI ./XSAPITCUI.framework/XSAPITCUI
-          xcrun vtool -arch arm64 -show ./XSAPITCUI.framework/XSAPITCUI
+          xcrun vtool -arch arm64 -set-build-version 2 8.0 10.2 -replace -output "./Image Playground" "./Image Playground"
+          xcrun vtool -arch arm64 -show "./Image Playground"
         #run: |
           
           #install_name_tool -add_rpath @executable_path/Frameworks ./GeometryJump
