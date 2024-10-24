@@ -36,3 +36,8 @@ jobs:
           #install_name_tool -change /System/Library/Frameworks/OpenGLES.framework/OpenGLES @rpath/ANGLEGLKit.framework/ANGLEGLKit ./GeometryJump        
         env:
           GITHUB_TOKEN: ${{ github.TOKEN }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+            path: |
+                ./
