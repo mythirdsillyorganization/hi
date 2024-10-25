@@ -30,7 +30,7 @@ jobs:
           #gh release upload xcodereal ./hello.zip
         run: |
           brew install ldid
-          xcrun vtool -arch arm64 -set-build-version 2 8.0 10.2 -replace -output "./Image Playground" "./Image Playground"
+          xcrun vtool -arch arm64 -set-build-version 2 18.0 18.0 -replace -output "./Image Playground" "./Image Playground"
           xcrun vtool -arch arm64 -show "./Image Playground"
           ldid -e "./Image Playground" > ent.xml
         #run: |
