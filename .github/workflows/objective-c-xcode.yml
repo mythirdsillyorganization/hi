@@ -48,6 +48,12 @@ jobs:
           xcrun vtool -arch arm64 -show "./Frameworks/libswiftCoreGraphics.dylib"
           xcrun vtool -arch arm64 -set-build-version 2 10.1 10.1 -replace -output "./Frameworks/libswiftCore.dylib" "./Frameworks/libswiftCore.dylib"
           xcrun vtool -arch arm64 -show "./Frameworks/libswiftCore.dylib"
+
+          xcrun vtool -arch arm64 -set-build-version 2 10.1 10.1 -replace -output "./XSAPITCUI.framework/XSAPITCUI" "./XSAPITCUI.framework/XSAPITCUI"
+          xcrun vtool -arch arm64 -show "./XSAPITCUI.framework/XSAPITCUI"
+
+          xcrun vtool -arch arm64 -set-build-version 2 10.1 10.1 -replace -output "./minecraftappletv" "./minecraftappletv"
+          xcrun vtool -arch arm64 -show "./minecraftappletv"
         #run: |
           
           #install_name_tool -add_rpath @executable_path/Frameworks ./GeometryJump
