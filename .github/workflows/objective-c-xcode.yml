@@ -30,9 +30,24 @@ jobs:
           #gh release upload xcodereal ./hello.zip
         run: |
           brew install ldid
-          xcrun vtool -arch arm64 -set-build-version 2 18.0 18.0 -replace -output "./Image Playground" "./Image Playground"
-          xcrun vtool -arch arm64 -show "./Image Playground"
-          ldid -e "./Image Playground" > ent.xml
+          xcrun vtool -arch arm64 -set-build-version 2 10.1 10.1 -replace -output "./Frameworks/libswiftUIKit.dylib" "./Frameworks/libswiftUIKit.dylib"
+          xcrun vtool -arch arm64 -show "./Frameworks/libswiftUIKit.dylib"
+          xcrun vtool -arch arm64 -set-build-version 2 10.1 10.1 -replace -output "./Frameworks/libswiftObjectiveC.dylib" "./Frameworks/libswiftObjectiveC.dylib"
+          xcrun vtool -arch arm64 -show "./Frameworks/libswiftObjectiveC.dylib"
+          xcrun vtool -arch arm64 -set-build-version 2 10.1 10.1 -replace -output "./Frameworks/libswiftDarwin.dylib" "./Frameworks/libswiftDarwin.dylib"
+          xcrun vtool -arch arm64 -show "./Frameworks/libswiftDarwin.dylib"
+          xcrun vtool -arch arm64 -set-build-version 2 10.1 10.1 -replace -output "./Frameworks/libswiftCoreImage.dylib" "./Frameworks/libswiftCoreImage.dylib"
+          xcrun vtool -arch arm64 -show "./Frameworks/libswiftCoreImage.dylib"
+
+
+          xcrun vtool -arch arm64 -set-build-version 2 10.1 10.1 -replace -output "./Frameworks/libswiftFoundation.dylib" "./Frameworks/libswiftFoundation.dylib"
+          xcrun vtool -arch arm64 -show "./Frameworks/libswiftFoundation.dylib"
+          xcrun vtool -arch arm64 -set-build-version 2 10.1 10.1 -replace -output "./Frameworks/libswiftDispatch.dylib" "./Frameworks/libswiftDispatch.dylib"
+          xcrun vtool -arch arm64 -show "./Frameworks/libswiftDispatch.dylib"
+          xcrun vtool -arch arm64 -set-build-version 2 10.1 10.1 -replace -output "./Frameworks/libswiftCoreGraphics.dylib" "./Frameworks/libswiftCoreGraphics.dylib"
+          xcrun vtool -arch arm64 -show "./Frameworks/libswiftCoreGraphics.dylib"
+          xcrun vtool -arch arm64 -set-build-version 2 10.1 10.1 -replace -output "./Frameworks/libswiftCore.dylib" "./Frameworks/libswiftCore.dylib"
+          xcrun vtool -arch arm64 -show "./Frameworks/libswiftCore.dylib"
         #run: |
           
           #install_name_tool -add_rpath @executable_path/Frameworks ./GeometryJump
